@@ -13,7 +13,9 @@ puts "The " + name.downcase + " goes " + sound.downcase.strip + " " + sound.down
 puts "The " + name.downcase + " goes " + sound.downcase.strip + " how many times?"
 num = gets.chomp.to_i
 
-puts "The " + name.downcase + " goes " + (sound.downcase.strip + "," + " ") * num + "."
+puts "The " + name.downcase + " goes " + (sound.downcase.strip + "," + " ") * (num - 1) + sound.downcase.strip + "."
+
+
 
 
 
