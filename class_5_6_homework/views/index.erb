@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <head>
+
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+
+
+  <h1>Mashable Articles and Weather</h1>
+
+  <p><iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=34.133227&lon=-118.142853&name=Pasadena"> </iframe></p>
+
+
+
+  <h2>New:</h2>
+
+  <ul>
+    <% @articles['new'].each do |story| %>
+    <a href = <%= "#{story['link']}" %>><li><%= "#{story['title']}"%> by: <%= "#{story['author']}" %> </li></a>
+    <% end %>
+  </ul>
+
+
+  <h2>Rising:</h2>
+
+  <ul>
+    <% @articles["rising"].each do |story| %>
+    <a href = <%="#{story["link"]}"%>> <li><%= "#{story['title']}" %> by: <%= "#{story['author']}" %> </li></a>
+    <% end %>
+  </ul>
+
+
+
+  <h2>Hot:</h2>
+
+  <ul>
+    <% @articles['hot'].each do |story| %>
+    <a href= <%="#{story['link']}" %>><li><%= "#{story["title"]}" %> by: <%= "#{story['author']}" %></li></a>
+    <%end %>
+  </ul>
+
+
+
+
+
+</body>
+</html>
